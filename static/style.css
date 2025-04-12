@@ -1,0 +1,51 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background-image: url("bg-img.jpg");
+    /* background: #b8daac; */
+    font-style: oblique;
+  }
+  .container {
+    align-items: center;
+    max-width: 600px;
+    margin: auto;
+    color:#328E6E;
+    background:#f9e5f7;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  h1{
+    text-align: center;
+    color:#c065bb;
+
+  }
+  label{
+    color:#10372a;
+    
+  }
+  #sourceLang, #targetLang {
+    display:inline-flex;
+    background-color: #e8f3ca;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 15px;
+    color:#328E6E;
+  }
+  select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  button {
+    background: #bec3af;
+  }
+  #recognized, #translated {
+    background: #bec3af;
+    padding: 10px;
+    border-radius: 6px;
+    min-height: 40px;
+  }
+  

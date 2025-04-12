@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Offline Speech Translator</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Offline Speech Translator</h1>
+    <label>Source Language:</label>
+    <select id="sourceLang" class="langSelect">
+      {% for lang in languages %}
+        <option>{{ lang }}</option>
+      {% endfor %}
+    </select>
+    <label>Target Language:</label>
+    <select id="targetLang" class="langSelect">
+      {% for lang in languages %}
+        <option>{{ lang }}</option>
+      {% endfor %}
+    </select>
+    <button onclick="startTranslation()">🎤 Start Listening</button>
+
+    <h3>Recognized Speech</h3>
+    <div id="recognized"></div>
+
+    <h3>Translated Text</h3>
+    <div id="translated"></div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Offline Speech Translator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>🌐 Offline Speech Translator</h1>
+    <form id="translate-form">
+        <label for="source">Source Language:</label>
+        <select id="source" name="source">
+            <option>English</option>
+            <option>Hindi</option>
+            <option>Japanese</option>
+            <option>Chinese</option>
+            <option>Spanish</option>
+            <option>French</option>
+            <option>German</option>
+        </select>
+
+        <label for="target">Target Language:</label>
+        <select id="target" name="target">
+            <option>English</option>
+            <option>Hindi</option>
+            <option>Japanese</option>
+            <option>Chinese</option>
+            <option>Spanish</option>
+            <option>French</option>
+            <option>German</option>
+        </select>
+
+        <button type="submit">🎙️ Start Speaking</button>
+    </form>
+
+    <div id="results">
+        <p><strong>🗣️ Recognized:</strong> <span id="recognized"></span></p>
+        <p><strong>🌍 Translated:</strong> <span id="translated"></span></p>
+    </div>
+
+    <script>
+        document.getElementById('translate-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const response = await fetch('/translate', {
+                method: 'POST',
+                body: formData
+            });
+            const data = await response.json();
+            document.getElementById('recognized').innerText = data.recognized;
+            document.getElementById('translated').innerText = data.translated;
+        });
+    </script>
+</body>
+</html> -->
